@@ -1,0 +1,1 @@
+"Apple", "Google", "Microsoft", "Amazon", "Facebook", "Coca-Cola", "Disney", "Samsung", "Louis Vuitton", "McDonald's"
