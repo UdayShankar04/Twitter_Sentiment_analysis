@@ -46,3 +46,6 @@ tqdm==4.50.2
 tweepy==3.9.0
 urllib3==1.25.10
 Werkzeug==1.0.1
+wordnet
+pros_cons
+reuters
