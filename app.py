@@ -122,7 +122,7 @@ app.layout = html.Div(children=[
 def update_graph_live(n):
 
     # Loading data from Heroku PostgreSQL
-    DATABASE_URL = os.environ['DATABASE_URL'] = 'postgres://bvttakbihbxcns:4afb139249d62e9d2b4e8d150d508728fe53a5976e8229cba28e4b30cf58c303@ec2-52-86-116-94.compute-1.amazonaws.com:5432/d8701t98h0a3e'
+    DATABASE_URL = os.environ['DATABASE_URL']
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     query = "SELECT id_str, text, created_at, polarity, user_location, user_followers_count FROM {}".format(setting.TABLE_NAME)
     df = pd.read_sql(query, con=conn)
@@ -300,7 +300,7 @@ def update_graph_live(n):
 
                         html.Div(
                             children=[
-                                html.P("Currently tracking \"Facebook\" brand (NASDAQ: FB) on Twitter in Pacific Daylight Time (PDT).",
+                                html.P("Currently tracking \"Apple\" brand (NASDAQ: FB) on Twitter in Pacific Daylight Time (PDT).",
                                     style={
                                         'fontSize': 25
                                     }
@@ -324,7 +324,7 @@ def update_graph_live(n):
 def update_graph_bottom_live(n):
 
     # Loading data from Heroku PostgreSQL
-    DATABASE_URL = os.environ['DATABASE_URL'] = 'postgres://bvttakbihbxcns:4afb139249d62e9d2b4e8d150d508728fe53a5976e8229cba28e4b30cf58c303@ec2-52-86-116-94.compute-1.amazonaws.com:5432/d8701t98h0a3ef'
+    DATABASE_URL = os.environ['DATABASE_URL']
     conn = psycopg2.connect(DATABASE_URL, sslmode='require')
     query = "SELECT id_str, text, created_at, polarity, user_location FROM {}".format(setting.TABLE_NAME)
     df = pd.read_sql(query, con=conn)
